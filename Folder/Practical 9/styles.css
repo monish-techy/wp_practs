@@ -1,0 +1,11 @@
+p{
+   color: darkorange;
+   font-size: 18px;
+}
+h1{
+   color: blue;
+   text-decoration: underline;
+}
+ul>li{
+  color: gold;
+}
