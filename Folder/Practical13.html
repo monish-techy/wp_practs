@@ -1,0 +1,136 @@
+<html>
+<head>
+    <title>User Registration</title>
+</head>
+<body>
+    <form action="">
+        <h1 align="center">User Registration Form</h1>
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" id="name"/></td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" name="dob" id="dob"/></td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td><input type="tel" name="phone" id="number"/></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" id="email"/></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea name="address" cols="20" rows="5" id="address"></textarea></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>Male <input type="radio" name="gender" value="male"/>Female <input type="radio" name="gender" value="female"/></td>
+            </tr>
+            <tr>
+                <td>State:</td>
+                <td>
+                    <select name="state" id="state">
+                        <option value="">Select State</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Gujarat">Gujarat</option>
+            
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Education:</td>
+                <td>
+                    <select name="education" id="education">
+                        <option value="">----</option>
+                        <option value="10th">10th Grade</option>
+                        <option value="12th">12th Grade</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="btech">Btech</option>
+                   
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Upload Image:</td>
+                <td><input type="file" name="image" id="image"/></td>
+            </tr>
+        </table>
+        <input type="button" value="Submit" onClick="showData()">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>  
+<script>
+    function showData(){
+        var name = document.getElementById('name').value;
+        var dob = document.getElementById('dob').value;
+        var number = document.getElementById('number').value;
+        var email = document.getElementById('email').value;
+        var address = document.getElementById('address').value;
+        var gender = document.querySelector('input[name="gender"]:checked').value;
+        var state = document.getElementById('state').value;
+        var education = document.getElementById('education').value;
+        var image = document.getElementById('image').value;
+            if (name === '') {
+                alert('Please enter your name.');
+                return;
+            }
+            if (dob === '') {
+                alert('Please enter your date of birth.');
+                return;
+            }
+            if (number === '') {
+                alert('Please enter your phone number.');
+                return;
+            }
+            else if(number.length<10||number.length>10){
+                alert('Please enter 10 digit number.');
+            }
+            var atSymbol = email.indexOf("@");
+            var dotSymbol = email.lastIndexOf(".");
+            var spaceSymbol = email.indexOf(" ");
+            if (email === '') {
+                alert('Please enter your email address.');
+                return;
+            }
+            else if(!((atSymbol != -1) &&
+                (atSymbol != 0) &&
+                (dotSymbol != -1) &&
+                (dotSymbol != 0) &&
+                (dotSymbol > atSymbol + 1) &&
+                (emailAddress.length > dotSymbol + 1) &&
+                (spaceSymbol == -1))) {
+                alert("Error !!! Email address is not valid.");
+                return;
+            }
+            if (address === '') {
+                alert('Please enter your address.');
+                return;
+            }
+            if (!gender) {
+                alert('Please select your gender.');
+                return;
+            }
+            if (state === '') {
+                alert('Please select your state.');
+                return;
+            }
+            if (education === '') {
+                alert('Please select your education level.');
+                return;
+            }
+            if (image === '') {
+                alert('Please upload your image.');
+                return;
+            }
+            console.log(`Name: ${name},DOB: ${dob},Phone No. ${number},Email Id.:${email},Address: ${address},Gender: ${gender},State: ${state},Education: ${education}`);
+        
+    }
+    
+</script> 
