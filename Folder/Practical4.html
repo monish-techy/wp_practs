@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title>User Registration</title>
+</head>
+<body>
+    <form>
+        <h1 align="center">User Registration Form</h1>
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name"/></td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" name="dob"/></td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td><input type="tel" name="phone"/></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email"/></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea name="address" cols="20" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>Male <input type="radio" name="gender" value="male"/>Female <input type="radio" name="gender" value="female"/></td>
+            </tr>
+            <tr>
+                <td>State:</td>
+                <td>
+                    <select name="state">
+                        <option value="">Select State</option>
+                        <option value="AP">Andhra Pradesh</option>
+                        <option value="AR">Arunachal Pradesh</option>
+                        <option value="AS">Assam</option>
+                        <option value="BR">Bihar</option>
+                        <option value="CG">Chhattisgarh</option>
+                        <option value="GA">Goa</option>
+                        <option value="GJ">Gujarat</option>
+            
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Education:</td>
+                <td>
+                    <select name="education">
+                        <option value="">----</option>
+                        <option value="10th">10th Grade</option>
+                        <option value="12th">12th Grade</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="btech">Btech</option>
+                   
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Upload Image:</td>
+                <td><input type="file" name="image"/></td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
